@@ -1,0 +1,211 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+form {
+    margin-bottom: 20px;
+}
+.worker-details {
+    margin-bottom: 20px;
+}
+
+/* Radar Charts */
+.actuals, .requireds {
+    margin-top: 2rem;
+}
+
+.actuals h3, .requireds h3 {
+    font-size: 1.25rem; /* Increased font size for better visibility */
+    font-weight: 400; /* Increased font weight for emphasis */
+    color: var(--cobalt-blue);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+canvas {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+/* Custom styles for the Worker Management System */
+
+/* Body background color */
+/* Custom styles for the Worker Management System */
+
+/* Body background color */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Custom styles for the navigation bar */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Custom styles for the main heading */
+h2 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+/* Center all h3 elements */
+h3 {
+    text-align: center;
+    margin: 20px 0; /* Optional: Add some margin for spacing */
+}
+/* Custom styles for the paragraph */
+p {
+    color: #6c757d;
+    font-size: 1.1em;
+}
+
+/* Form container */
+#addWorkerForm {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Form headings */
+#addWorkerForm h3 {
+    color: #343a40;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+/* Form labels */
+#addWorkerForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Form inputs */
+#addWorkerForm input[type="text"],
+#addWorkerForm input[type="date"],
+#addWorkerForm input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #495057;
+}
+
+/* Form inputs focus state */
+#addWorkerForm input[type="text"]:focus,
+#addWorkerForm input[type="date"]:focus,
+#addWorkerForm input[type="number"]:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+/* Form button */
+#addWorkerForm button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Form button hover state */
+#addWorkerForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Horizontal rule */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ced4da;
+    margin: 30px 0;
+}
+/* Custom styles for the search forms */
+
+/* Search forms container */
+#searchByNameForm,
+#searchByDepartmentForm,
+#searchBySkillForm {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Search form headings */
+#searchByNameForm h3,
+#searchByDepartmentForm h3,
+#searchBySkillForm h3 {
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+/* Search form labels */
+#searchByNameForm label,
+#searchByDepartmentForm label,
+#searchBySkillForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #495057;
+}
+
+/* Search form inputs */
+#searchByNameForm input[type="text"],
+#searchByDepartmentForm input[type="text"],
+#searchBySkillForm input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #495057;
+}
+
+/* Search form inputs focus state */
+#searchByNameForm input[type="text"]:focus,
+#searchByDepartmentForm input[type="text"]:focus,
+#searchBySkillForm input[type="number"]:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+/* Search form buttons */
+#searchByNameForm button,
+#searchByDepartmentForm button,
+#searchBySkillForm button {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Search form buttons hover state */
+#searchByNameForm button:hover,
+#searchByDepartmentForm button:hover,
+#searchBySkillForm button:hover {
+    background-color: #218838;
+}

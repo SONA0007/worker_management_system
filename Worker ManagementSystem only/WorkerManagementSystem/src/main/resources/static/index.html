@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Management System</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Worker Management System</a>
+    </div>
+</nav>
+
+<!-- Form to Add Worker -->
+<h3>Add Worker</h3>
+<form id="addWorkerForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="department">Department:</label>
+    <input type="text" id="department" name="department" required><br><br>
+
+    <label for="subDepartment">Sub Department:</label>
+    <input type="text" id="subDepartment" name="subDepartment"><br><br>
+
+    <label for="joinDate">Join Date:</label>
+    <input type="date" id="joinDate" name="joinDate"><br><br>
+
+    <label for="evaluationDate">Evaluation Date:</label>
+    <input type="date" id="evaluationDate" name="evaluationDate"><br><br>
+
+    <label for="education">Education:</label>
+    <input type="text" id="education" name="education"><br><br>
+
+    <label for="plant">Plant:</label>
+    <input type="number" id="plant" name="plant"><br><br>
+
+    <!-- Skill inputs -->
+    <h3>Skills</h3>
+    <label for="skill1">Skill 1:</label>
+    <input type="number" id="skill1" name="skill1" min="0" max="10"><br><br>
+
+    <label for="skill2">Skill 2:</label>
+    <input type="number" id="skill2" name="skill2" min="0" max="10"><br><br>
+
+    <label for="skill3">Skill 3:</label>
+    <input type="number" id="skill3" name="skill3" min="0" max="10"><br><br>
+
+    <label for="skill4">Skill 4:</label>
+    <input type="number" id="skill4" name="skill4" min="0" max="10"><br><br>
+
+    <label for="skill5">Skill 5:</label>
+    <input type="number" id="skill5" name="skill5" min="0" max="10"><br><br>
+
+    <label for="skill6">Skill 6:</label>
+    <input type="number" id="skill6" name="skill6" min="0" max="10"><br><br>
+
+    <label for="skill7">Skill 7:</label>
+    <input type="number" id="skill7" name="skill7" min="0" max="10"><br><br>
+
+    <label for="skill8">Skill 8:</label>
+    <input type="number" id="skill8" name="skill8" min="0" max="10"><br><br>
+
+    <label for="skill9">Skill 9:</label>
+    <input type="number" id="skill9" name="skill9" min="0" max="10"><br><br>
+
+    <label for="skill10">Skill 10:</label>
+    <input type="number" id="skill10" name="skill10" min="0" max="10"><br><br>
+
+    <label for="skill11">Skill 11:</label>
+    <input type="number" id="skill11" name="skill11" min="0" max="10"><br><br>
+
+    <!-- Required Skill inputs -->
+    <h3>Rated Skills</h3>
+    <label for="rskill1">Rated Skill 1:</label>
+    <input type="number" id="rskill1" name="rskill1" min="0" max="10"><br><br>
+
+    <label for="rskill2">Rated Skill 2:</label>
+    <input type="number" id="rskill2" name="rskill2" min="0" max="10"><br><br>
+
+    <label for="rskill3">Rated Skill 3:</label>
+    <input type="number" id="rskill3" name="rskill3" min="0" max="10"><br><br>
+
+    <label for="rskill4">Rated Skill 4:</label>
+    <input type="number" id="rskill4" name="rskill4" min="0" max="10"><br><br>
+
+    <label for="rskill5">Rated Skill 5:</label>
+    <input type="number" id="rskill5" name="rskill5" min="0" max="10"><br><br>
+
+    <label for="rskill6">Rated Skill 6:</label>
+    <input type="number" id="rskill6" name="rskill6" min="0" max="10"><br><br>
+
+    <label for="rskill7">Rated Skill 7:</label>
+    <input type="number" id="rskill7" name="rskill7" min="0" max="10"><br><br>
+
+    <label for="rskill8">Rated Skill 8:</label>
+    <input type="number" id="rskill8" name="rskill8" min="0" max="10"><br><br>
+
+    <label for="rskill9">Rated Skill 9:</label>
+    <input type="number" id="rskill9" name="rskill9" min="0" max="10"><br><br>
+
+    <label for="rskill10">Rated Skill 10:</label>
+    <input type="number" id="rskill10" name="rskill10" min="0" max="10"><br><br>
+
+    <label for="rskill11">Rated Skill 11:</label>
+    <input type="number" id="rskill11" name="rskill11" min="0" max="10"><br><br>
+
+    <button type="button" onclick="addWorker()">Add Worker</button>
+</form>
+
+<hr>
+
+<!-- Form to Search Worker by Name -->
+<h3>Search Worker by Name</h3>
+<form id="searchByNameForm">
+    <label for="searchName">Worker Name:</label>
+    <input type="text" id="searchName" name="searchName">
+    <button type="button" onclick="searchByName()">Search</button>
+</form>
+
+<!-- Form to Search Worker by Department -->
+<h3>Search Worker by Department</h3>
+<form id="searchByDepartmentForm">
+    <label for="searchDepartment">Department:</label>
+    <input type="text" id="searchDepartment" name="searchDepartment">
+    <button type="button" onclick="searchByDepartment()">Search</button>
+</form>
+
+<!-- Form to Search Worker by Skill Level -->
+<h3>Search Worker by Skill Level</h3>
+<form id="searchBySkillForm">
+    <label for="searchSkillLevel">Skill Level:</label>
+    <input type="number" id="searchSkillLevel" name="searchSkillLevel" min="0" max="10">
+    <button type="button" onclick="searchBySkillLevel()">Search</button>
+</form>
+
+<!-- Display Search Results -->
+<div id="results"></div>
+
+<script>
+    // Function to add a worker
+    function addWorker() {
+    const formData = {
+        name: document.getElementById('name').value,
+        department: document.getElementById('department').value,
+        subDepartment: document.getElementById('subDepartment').value,
+        joinDate: document.getElementById('joinDate').value,
+        evaluationDate: document.getElementById('evaluationDate').value,
+        education: document.getElementById('education').value,
+        plant: document.getElementById('plant').value,
+        skill1: document.getElementById('skill1').value,
+        skill2: document.getElementById('skill2').value,
+        skill3: document.getElementById('skill3').value,
+        skill4: document.getElementById('skill4').value,
+        skill5: document.getElementById('skill5').value,
+        skill6: document.getElementById('skill6').value,
+        skill7: document.getElementById('skill7').value,
+        skill8: document.getElementById('skill8').value,
+        skill9: document.getElementById('skill9').value,
+        skill10: document.getElementById('skill10').value,
+        skill11: document.getElementById('skill11').value,
+
+        rskill1: document.getElementById('rskill1').value,
+        rskill2: document.getElementById('rskill2').value,
+        rskill3: document.getElementById('rskill3').value,
+        rskill4: document.getElementById('rskill4').value,
+        rskill5: document.getElementById('rskill5').value,
+        rskill6: document.getElementById('rskill6').value,
+        rskill7: document.getElementById('rskill7').value,
+        rskill8: document.getElementById('rskill8').value,
+        rskill9: document.getElementById('rskill9').value,
+        rskill10: document.getElementById('rskill10').value,
+        rskill11: document.getElementById('rskill11').value
+    };
+
+    fetch('http://localhost:9090/api/add', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('Worker added successfully');
+        console.log(data);
+    })
+    .catch(error => console.error('Error:', error));
+}
+
+
+    // Function to search worker by name
+    function searchByName() {
+        const name = document.getElementById('searchName').value;
+        fetch(`http://localhost:9090/api/search?name=${name}`)
+            .then(response => response.json())
+            .then(data => displayResults(data))
+            .catch(error => console.error('Error:', error));
+    }
+
+    // Function to search worker by department
+    function searchByDepartment() {
+        const department = document.getElementById('searchDepartment').value;
+        fetch(`http://localhost:9090/api/searchByDepartment?department=${department}`)
+            .then(response => response.json())
+            .then(data => displayResults(data))
+            .catch(error => console.error('Error:', error));
+    }
+
+    // Function to search worker by skill level
+    function searchBySkillLevel() {
+        const skillLevel = document.getElementById('searchSkillLevel').value;
+        fetch(`http://localhost:9090/api/searchBySkillLevel?skillLevel=${skillLevel}`)
+            .then(response => response.json())
+            .then(data => displayResults(data))
+            .catch(error => console.error('Error:', error));
+    }
+
+    // Display search results with all worker details
+    function displayResults(data) {
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = '<h3>Search Results:</h3>';
+
+    if (data.length === 0) {
+        resultsDiv.innerHTML += '<p>No results found.</p>';
+    } else {
+        data.forEach((worker, index) => {
+            const workerDiv = document.createElement('div');
+            workerDiv.classList.add('worker-details');
+            workerDiv.innerHTML = `
+                <p><strong>Name:</strong> ${worker.name}</p>
+                <p><strong>Department:</strong> ${worker.department}</p>
+                <p><strong>Sub-Department:</strong> ${worker.subDepartment}</p>
+                <p><strong>Join Date:</strong> ${worker.joinDate}</p>
+                <p><strong>Evaluation Date:</strong> ${worker.evaluationDate}</p>
+                <p><strong>Education:</strong> ${worker.education}</p>
+                <p><strong>Plant:</strong> ${worker.plant}</p>
+                <p><strong>Skills:</strong>
+                    Skill1: ${worker.skill1}, Skill2: ${worker.skill2}, Skill3: ${worker.skill3}, Skill4: ${worker.skill4},
+                    Skill5: ${worker.skill5}, Skill6: ${worker.skill6}, Skill7: ${worker.skill7}, Skill8: ${worker.skill8},
+                    Skill9: ${worker.skill9}, Skill10: ${worker.skill10}, Skill11: ${worker.skill11}
+                </p>
+                <p><strong>Rated Skills:</strong>
+                    RSkill1: ${worker.rskill1}, RSkill2: ${worker.rskill2}, RSkill3: ${worker.rskill3}, RSkill4: ${worker.rskill4},
+                    RSkill5: ${worker.rskill5}, RSkill6: ${worker.rskill6}, RSkill7: ${worker.rskill7}, RSkill8: ${worker.rskill8},
+                    RSkill9: ${worker.rskill9}, RSkill10: ${worker.rskill10}, RSkill11: ${worker.rskill11}
+                </p>
+                <div class="chart-container">
+                    <canvas id="actualRadarChart-${index}"></canvas>
+                    <canvas id="requiredRadarChart-${index}"></canvas>
+                </div>
+                <hr>
+            `;
+            resultsDiv.appendChild(workerDiv);
+
+            // Initialize Actual Skills Radar Chart for the worker
+            const actualCtx = document.getElementById(`actualRadarChart-${index}`).getContext('2d');
+            new Chart(actualCtx, {
+                type: 'radar',
+                data: {
+                    labels: Object.keys(worker).filter(key => key.startsWith('skill')),
+                    datasets: [{
+                        label: 'Actual Skill Levels',
+                        data: Object.values(worker).filter((_, i) => i >= 1 && i < 11),  // Adjust according to skill indexes
+                        fill: true,
+                        backgroundColor: 'rgba(34, 202, 236, 0.2)',
+                        borderColor: 'rgba(34, 202, 236, 1)',
+                        pointBackgroundColor: 'rgba(34, 202, 236, 1)'
+                    }]
+                },
+                options: {
+                    scales: {
+                        r: {
+                            angleLines: { display: false },
+                            min: 0,
+                            max: 4,
+                            ticks: {
+                                stepSize: 1,
+                                display: true,
+                                callback: value => value % 1 === 0 ? value : null
+                            },
+                            pointLabels: {
+                                font: { size: 14 }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Initialize Required Skills Radar Chart for the worker
+            const requiredCtx = document.getElementById(`requiredRadarChart-${index}`).getContext('2d');
+            new Chart(requiredCtx, {
+                type: 'radar',
+                data: {
+                    labels: Object.keys(worker).filter(key => key.startsWith('rskill')),
+                    datasets: [{
+                        label: 'Required Skill Levels',
+                        data: Object.values(worker).filter((_, i) => i >= 12 && i < 22),  // Adjust according to rskill indexes
+                        fill: true,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+                    }]
+                },
+                options: {
+                    scales: {
+                        r: {
+                            angleLines: { display: false },
+                            min: 0,
+                            max: 4,
+                            ticks: {
+                                stepSize: 1,
+                                display: true,
+                                callback: value => value % 1 === 0 ? value : null
+                            },
+                            pointLabels: {
+                                font: { size: 14 }
+                            }
+                            }
+                        }
+                    }
+                });
+            });
+        }
+    }
+
+</script>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
