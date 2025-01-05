@@ -110,12 +110,8 @@ These insights can help developers overcome similar issues while working on simi
 
 By ensuring these configurations are correct and the database is set up beforehand, you can avoid connection issues.  
 
-
 ## License  
-
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.  
-  
 
 - [Spring Boot Documentation](https://spring.io/projects/spring-boot)  
 - [Maven Documentation](https://maven.apache.org/)  
-```  
