@@ -114,7 +114,7 @@ By ensuring these configurations are correct and the database is set up beforeha
 
 ## Video demo
 
-Click [here](./worker_management_system/demo.mp4) to watch the project demonstration.  
+Click [here](./demo.mp4) to watch the project demonstration.  
 
 
 ## License  
